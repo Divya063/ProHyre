@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% load static %}
+{% block style %}
+<link rel="stylesheet" href="{% static 'app/css/index.css' %}">
+{% endblock %}
+{% block content %}
+<div id="home">
+    <div id="home-text">
+        <h1><span>ProH</span>YRE</h1>
+        <span>Make your hiring process more consistent and efficient.</span>
+        <p><img src="{% static 'app/images/checked.svg' %}" class="check" />
+            Ensure consistency in the recruitment and selection of candidates
+            without any discrimination</p>
+        <p><img src="{% static 'app/images/checked.svg' %}" class="check" />
+            Open communication between the candidates and the recruiters/interviewers.</p>
+        <p><img src="{% static 'app/images/checked.svg' %}" class="check" />
+            Avoids typical evaluations of candidates that may be filled with
+            ambiguity, superficial statements, and generalizations.</p>
+        <p><img src="{% static 'app/images/checked.svg' %}" class="check" />
+            A follow up system which ensures conversations don’t slip through the
+            cracks.</p>
+    </div>
+</div>
+{% endblock %}
