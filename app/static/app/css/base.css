@@ -54,3 +54,34 @@ body {
     font-weight: 400;
     font-size: 24px;
 }
+
+.popup {
+    background: #fff;
+    padding: 20px;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    position: absolute;
+    width: auto;
+    border-radius: 12px;
+    box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.05);
+    right: 50px;
+    visibility: hidden;
+    top: 80px;
+}
+
+.visible {
+    visibility: visible;
+}
+
+.popup-btn {
+    font-size: 20px;
+    padding: 10px 30px;
+}
+
+#employer {
+    grid-row: 1
+}
+
+#candidate {
+    grid-row: 2
+}

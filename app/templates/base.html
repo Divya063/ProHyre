@@ -3,6 +3,7 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="{% static 'app/css/base.css' %}">
+    <script src="{% static 'app/js/base.js' %}" ></script>
     {% block style %}{% endblock %}
     <title>ProHyre</title>
 </head>
@@ -14,6 +15,10 @@
             <button class="login-btn">Login</button>
             <span>Sign Up</span>
         </div>
+    </div>
+    <div class="popup">
+        <button class="login-btn popup-btn" id="employer">Login as Employer</button>
+        <button class="login-btn popup-btn" id="candidate">Login as Candidate</button>
     </div>
     {% block content %}{% endblock %}
 </body>
