@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{% static 'app/css/base.css' %}">
+    {% block style %}{% endblock %}
+    <title>ProHyre</title>
+</head>
+
+<body>
+    <div id="header">
+        <h1 id="header-title"><span>ProH</span>YRE</h1>
+        <div id="login">
+            <button class="login-btn">Login</button>
+            <span>Sign Up</span>
+        </div>
+    </div>
+    {% block content %}{% endblock %}
+</body>
+</html>

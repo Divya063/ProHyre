@@ -1,4 +1,4 @@
-#!/home/divya/ProHyre/venv/bin/python
+#!/Users/urvashi/htdocs/ProHyre/venv/bin/python
 
 import sys
 import getopt

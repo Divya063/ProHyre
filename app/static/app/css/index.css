@@ -1,0 +1,36 @@
+#home {
+    background: url("../images/18960.svg") no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+}
+
+#home-text {
+    width: 30vw;
+    float: right;
+    margin: 200px 50px 0px 0px;
+}
+
+#home-text h1 {
+    margin: 0;
+    font-size: 56px;
+    font-weight: 200;
+}
+
+#home-text span {
+    font-weight: 700;
+}
+
+#home-text p {
+    font-size: 22px;
+}
+
+.check {
+    width: 28px;
+    height: 28px;
+    vertical-align: bottom;
+}
