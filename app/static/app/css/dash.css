@@ -46,8 +46,9 @@
 
 .highlight {
     font-size: 0.8rem;
-    background: linear-gradient(to right, rgba(183, 162, 255, 1), rgba(183, 162, 255, 0.5));
+    background: linear-gradient(to right, rgba(183, 162, 255, 1), rgba(183, 162, 255, 0.6));
     padding: 12px;
+    box-shadow: inset 3px 3px 8px rgba(0, 0, 0, 0.1);
     border-bottom-left-radius: 50px;
     border-top-left-radius: 50px;
     float: right;

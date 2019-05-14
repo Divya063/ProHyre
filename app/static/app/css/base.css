@@ -7,6 +7,11 @@ body {
   color: #434343;
 }
 
+a {
+    padding: 0;
+    margin: 0;
+}
+
 #header {
   width: 100%;
   display: grid;
@@ -15,6 +20,7 @@ body {
   background: #fff;
   border-bottom-right-radius: 100px;
   box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.05);
+  position: sticky;
 }
 
 #header-title {

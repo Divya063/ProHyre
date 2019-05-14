@@ -1,0 +1,9 @@
+.footer {
+    text-align: center;
+    margin: 50px;
+}
+
+.footer a {
+    color: #339AD1;
+    font-weight: 500;
+}
