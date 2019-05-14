@@ -1,0 +1,97 @@
+{% extends "base.html" %}
+{% load static %}
+{% block style %}
+<link rel="stylesheet" href="{% static 'app/css/jobs.css' %}">
+{% endblock %}
+{% block content %}
+<div class="content">
+    {% include "./includes/sidebar.html" %}
+    <div class="dash-content">
+        <div class="section active-jobs">
+            <h1>Active Jobs</h1>
+            <div class="underline"></div>
+            <ul>
+                <li>
+                    <div class="left">
+                        <h4>Software Developer I</h4>
+                        <p>Bangalore, India</p>
+                    </div>
+                    <div class="right">
+                        <p>5 days ago</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="left">
+                        <h4>User Experience Engineer</h4>
+                        <p>Bangalore, India</p>
+                    </div>
+                    <div class="right">
+                        <p>12 days ago</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="left">
+                        <h4>Software Developer I</h4>
+                        <p>Bangalore, India</p>
+                    </div>
+                    <div class="right">
+                        <p>30 days ago</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="left">
+                        <h4>User Experience Engineer</h4>
+                        <p>Bangalore, India</p>
+                    </div>
+                    <div class="right">
+                        <p>1 month ago</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="left">
+                        <h4>Software Developer I</h4>
+                        <p>Bangalore, India</p>
+                    </div>
+                    <div class="right">
+                        <p>2 months ago</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="left">
+                        <h4>User Experience Engineer</h4>
+                        <p>Bangalore, India</p>
+                    </div>
+                    <div class="right">
+                        <p>4 months ago</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="section archived-jobs">
+            <h1>Archived Jobs</h1>
+            <div class="underline"></div>
+            <ul>
+                <li>
+                    <div class="left">
+                        <h4>Software Developer I</h4>
+                        <p>Bangalore, India</p>
+                    </div>
+                    <div class="right">
+                        <p>5 months ago</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="left">
+                        <h4>User Experience Engineer</h4>
+                        <p>Bangalore, India</p>
+                    </div>
+                    <div class="right">
+                        <p>12 months ago</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+{% include "./includes/footer.html" %}
+{% endblock %}
