@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load static %}
+{% block style %}
+<link rel="stylesheet" href="{% static 'app/css/jobs.css' %}">
+{% endblock %}
+{% block content %}
+<div class="content">
+    {% include "./includes/sidebar.html" %}
+    <div class="dash-content">
+        <div class="section active-jobs">
+            <h1>Profile Details</h1>
+            <div class="underline"></div>
+        </div>
+    </div>
+</div>
+{% include "./includes/footer.html" %}
+{% endblock %}
