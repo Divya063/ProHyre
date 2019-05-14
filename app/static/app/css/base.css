@@ -85,3 +85,14 @@ body {
 #candidate {
     grid-row: 2
 }
+
+.content {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+}
+
+@media screen and (max-width: 800px) {
+    .content {
+        grid-template-columns: 1fr 4fr;
+    }
+}
