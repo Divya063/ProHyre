@@ -1,0 +1,39 @@
+.double-section {
+    grid-row: 2;
+}
+
+.search {
+    grid-column: 2;
+    display: grid;
+    text-align: center;
+    grid-template-columns: auto;
+}
+
+.search input {
+    grid-column: 2;
+    border-radius: 12px;
+    border: none;
+    background-color: #F7F7F7;
+    font-size: 16px;
+    padding: 20px;
+    color: #434343;
+}
+
+.bargraph {
+    background: url("../images/bargraph.png") no-repeat;
+    height: 300px;
+    background-size: contain;
+    background-position: center;
+}
+
+.piechart {
+    background: url("../images/piechart.png") no-repeat;
+    height: 300px;
+    background-size: contain;
+    background-position: center;
+}
+
+.candidates {
+    grid-row: 3;
+    grid-column: 2;
+}

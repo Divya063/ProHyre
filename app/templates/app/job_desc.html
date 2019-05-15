@@ -1,0 +1,139 @@
+{% extends "base.html" %}
+{% load static %}
+{% block style %}
+<link rel="stylesheet" href="{% static 'app/css/dash.css' %}">
+<link rel="stylesheet" href="{% static 'app/css/jobs.css' %}">
+{% endblock %}
+{% block content %}
+<div class="content">
+    {% include "./includes/sidebar.html" %}
+    <div class="dash-content">
+        <div class="section job-desc">
+            <div id="heading">
+                <div id="left">
+                    <h1>Senior Software Engineer</h1>
+                    <h4>Bangalore, India</h4>
+                </div>
+                <div id="right">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 528.9 528.9"><path d="M328.9 89.1l107.6 107.6 -272.3 272.3L56.6 361.5 328.9 89.1zM518.1 63.2l-48-48c-18.5-18.5-48.7-18.5-67.3 0l-46 46 107.6 107.6 53.6-53.6C532.5 100.8 532.5 77.6 518.1 63.2zM0.3 512.7c-2 8.8 6 16.7 14.8 14.6l119.9-29.1L27.5 390.6 0.3 512.7z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 432 432"><path d="M393.1 14.3c-3.7-5.3-8.7-9.2-15-11.7 -4-1.7-8.2-2.6-12.6-2.6V0H66.4c-4.4 0-8.6 0.9-12.6 2.6 -6.3 2.5-11.3 6.4-15 11.7 -3.7 5.3-5.6 11.2-5.6 17.7v368c0 6.5 1.9 12.4 5.6 17.7 3.7 5.3 8.7 9.2 15 11.7 4 1.7 8.2 2.6 12.6 2.6 8.9 0 16.8-3.1 23.7-9.4l125.9-121.1 125.9 121.1c6.7 6.1 14.6 9.1 23.7 9.1 4.8 0 8.9-0.8 12.6-2.3 6.3-2.5 11.3-6.4 15-11.7 3.7-5.3 5.6-11.2 5.6-17.7V32C398.7 25.5 396.9 19.6 393.1 14.3zM362.2 391.1L241.4 275.2l-25.4-24.3 -25.4 24.3L69.8 391.1V36.5h292.4V391.1L362.2 391.1z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 438.5 438.5"><path d="M417.7 75.7c-1.7-1.7-3.9-2.6-6.6-2.6h-88.2L302.9 25.4c-2.9-7-8-13-15.4-18C280.1 2.5 272.6 0 264.9 0h-91.4c-7.6 0-15.1 2.5-22.6 7.4 -7.4 4.9-12.6 10.9-15.4 18l-20 47.7h-88.2c-2.7 0-4.9 0.9-6.6 2.6 -1.7 1.7-2.6 3.9-2.6 6.6v18.3c0 2.7 0.9 4.9 2.6 6.6 1.7 1.7 3.9 2.6 6.6 2.6h27.4v271.8c0 15.8 4.5 29.3 13.4 40.4 8.9 11.1 19.7 16.7 32.3 16.7h237.5c12.6 0 23.3-5.8 32.3-17.3 8.9-11.5 13.4-25.2 13.4-41V109.6h27.4c2.7 0 4.9-0.9 6.6-2.6 1.7-1.7 2.6-3.9 2.6-6.6V82.2C420.3 79.6 419.4 77.4 417.7 75.7zM169.3 39.7c1.3-1.7 3-2.8 4.9-3.1h90.5c1.9 0.4 3.5 1.4 4.9 3.1l13.7 33.4H155.3L169.3 39.7zM347.2 380.3c0 4.2-0.7 8-2 11.6 -1.3 3.5-2.7 6.1-4.1 7.7 -1.4 1.6-2.4 2.4-3 2.4H100.5c-0.6 0-1.6-0.8-3-2.4 -1.4-1.6-2.8-4.2-4.1-7.7 -1.3-3.5-2-7.4-2-11.6V109.6h255.8V380.3z"/><path d="M137 347.2h18.3c2.7 0 4.9-0.9 6.6-2.6 1.7-1.7 2.6-3.9 2.6-6.6V173.6c0-2.7-0.9-4.9-2.6-6.6 -1.7-1.7-3.9-2.6-6.6-2.6H137c-2.7 0-4.9 0.9-6.6 2.6 -1.7 1.7-2.6 3.9-2.6 6.6v164.5c0 2.7 0.9 4.9 2.6 6.6C132.2 346.3 134.4 347.2 137 347.2z"/><path d="M210.1 347.2h18.3c2.7 0 4.9-0.9 6.6-2.6 1.7-1.7 2.6-3.9 2.6-6.6V173.6c0-2.7-0.9-4.9-2.6-6.6 -1.7-1.7-3.9-2.6-6.6-2.6h-18.3c-2.7 0-4.9 0.9-6.6 2.6 -1.7 1.7-2.6 3.9-2.6 6.6v164.5c0 2.7 0.9 4.9 2.6 6.6C205.3 346.3 207.5 347.2 210.1 347.2z"/><path d="M283.2 347.2h18.3c2.7 0 4.9-0.9 6.6-2.6 1.7-1.7 2.6-3.9 2.6-6.6V173.6c0-2.7-0.9-4.9-2.6-6.6 -1.7-1.7-3.9-2.6-6.6-2.6H283.2c-2.7 0-4.9 0.9-6.6 2.6 -1.7 1.7-2.6 3.9-2.6 6.6v164.5c0 2.7 0.9 4.9 2.6 6.6C278.4 346.3 280.6 347.2 283.2 347.2z"/></svg>
+                    <h4>2 months ago</h4>
+                </div>
+            </div>
+            <p>Google aspires to be an organization that reflects the globally diverse audience that our products and technology serve. We believe that in
+                addition to hiring the best talent, a diversity of perspectives, ideas and cultures leads to the creation of better products and services.
+                <br><br>
+                Google’s software engineers develop the next-generation technologies that change how billions of users connect, explore, and interact with
+                information and one another. Our products need to handle information at massive scale, and extend well beyond web search.
+            </p>
+            <div id="footer">View more</div>
+        </div>
+        <div class="statistics jobs-statistics">
+            <div class="statistics-box">
+                <h1>523</h1>
+                <div class="highlight">
+                    <span>Candidates Applied</span>
+                </div>
+            </div>
+            <div class="statistics-box">
+                <h1>130</h1>
+                <div class="highlight">
+                    <span>Shortlisted Candidates</span>
+                </div>
+            </div>
+            <div class="statistics-box">
+                <h1>20</h1>
+                <div class="highlight">
+                    <span>Active Candidates</span>
+                </div>
+            </div>
+            <div class="statistics-box">
+                <h1>3</h1>
+                <div class="highlight">
+                    <span>Job Offers Made</span>
+                </div>
+            </div>
+            <div class="statistics-box">
+                <h1>1</h1>
+                <div class="highlight">
+                    <span>Accepted Offers</span>
+                </div>
+            </div>
+        </div>
+        <div class="double-section">
+            <div class="section candidates">
+                <h1>Active Candidates <a href="candidates/analysis"><span>View Analysis</span></a></h1>
+                <div class="underline"></div>
+                <ul>
+                    <li>
+                        <div class="left">
+                            <h4>Sudhanshu Gautam</h4>
+                            <p>Delhi, India</p>
+                        </div>
+                        <div class="right">
+                            <h4>Software Engineer I</h4>
+                            <p>Pending Feedback</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="left">
+                            <h4>Sejal Kataria</h4>
+                            <p>Bangalore, India</p>
+                        </div>
+                        <div class="right">
+                            <h4>User Experience Engineer</h4>
+                            <p>Upcoming Interview</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="left">
+                            <h4>Sejal Kataria</h4>
+                            <p>Bangalore, India</p>
+                        </div>
+                        <div class="right">
+                            <h4>User Experience Engineer</h4>
+                            <p>Upcoming Interview</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="left">
+                            <h4>Sejal Kataria</h4>
+                            <p>Bangalore, India</p>
+                        </div>
+                        <div class="right">
+                            <h4>User Experience Engineer</h4>
+                            <p>Pending Job Offer</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="section offers">
+                <h1>Accepted Offers</h1>
+                <div class="underline"></div>
+                <ul>
+                    <li>
+                        <div class="left">
+                            <h4>Sudhanshu Gautam</h4>
+                            <p>Delhi, India</p>
+                        </div>
+                        <div class="right">
+                            <h4>Software Engineer I</h4>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="left">
+                            <h4>Sejal Kataria</h4>
+                            <p>Bangalore, India</p>
+                        </div>
+                        <div class="right">
+                            <h4>User Experience Engineer</h4>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+{% include "./includes/footer.html" %}
+{% endblock %}

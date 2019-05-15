@@ -2,7 +2,7 @@
     grid-column: 2;
     display: grid;
     grid-template-columns: 1fr 6fr 1fr;
-    grid-template-rows: 1fr 2fr 2fr;
+    grid-template-rows: auto;
     margin-top: 50px;
 }
 
@@ -12,6 +12,7 @@
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-column-gap: 5%;
+    margin-bottom: 40px;
 }
 
 .statistics-box {
@@ -60,15 +61,6 @@
     width: 1.8rem;
     fill: #B7A2FF;
     vertical-align: baseline;
-}
-
-.section {
-    background-color: #fff;
-    box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.05);
-    margin: 50px 0;
-    padding: 30px;
-    border-radius: 12px;
-    margin: 50px 0 0 0;
 }
 
 .section h1 {
@@ -134,4 +126,5 @@ ul p {
 .jobs {
     grid-row: 3;
     grid-column: 2;
+    height: fit-content;
 }

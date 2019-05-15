@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+{% load static %}
+{% block style %}
+<link rel="stylesheet" href="{% static 'app/css/dash.css' %}">
+<link rel="stylesheet" href="{% static 'app/css/candidates.css' %}">
+{% endblock %}
+{% block content %}
+<div class="content">
+    {% include "./includes/sidebar.html" %}
+    <div class="dash-content">
+        <div class="section search">
+            <p>Search for a job posting:</p>
+            <input type="text" value="Senior Software Engineer"/>
+        </div>
+        <div class="double-section">
+            <div class="section">
+                <h1>Overall Scoring</h1>
+                <div class="underline"></div>
+                <div class="bargraph">
+                </div>
+            </div>
+            <div class="section">
+                <h1>Number of Candidates</h1>
+                <div class="underline"></div>
+                <div class="piechart">
+                </div>
+            </div>
+        </div>
+        <div class="section candidates">
+            <h1>Active Candidates</h1>
+            <div class="underline"></div>
+            <ul>
+                <li>
+                    <div class="left">
+                        <h4>Sudhanshu Gautam</h4>
+                        <p>Delhi, India</p>
+                    </div>
+                    <div class="right">
+                        <h4>Software Engineer I</h4>
+                        <p>Pending Feedback</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="left">
+                        <h4>Sejal Kataria</h4>
+                        <p>Bangalore, India</p>
+                    </div>
+                    <div class="right">
+                        <h4>User Experience Engineer</h4>
+                        <p>Pending Feedback</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="left">
+                        <h4>Sudhanshu Gautam</h4>
+                        <p>Delhi, India</p>
+                    </div>
+                    <div class="right">
+                        <h4>Software Engineer I</h4>
+                        <p>Pending Feedback</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="left">
+                        <h4>Sejal Kataria</h4>
+                        <p>Bangalore, India</p>
+                    </div>
+                    <div class="right">
+                        <h4>User Experience Engineer</h4>
+                        <p>Pending Feedback</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+{% include "./includes/footer.html" %}
+{% endblock %}
