@@ -20,8 +20,8 @@ def candidates(request):
 def candidates_analysis(request):
     return render(request, 'app/candidates_analysis.html', { 'active': 'candidates'})
 
-def feedbacks(request):
-    return render(request, 'app/feedbacks.html', { 'active': 'feedbacks'})
+def candidate(request):
+    return render(request, 'app/candidate.html', { 'active': 'candidate'})
 
 def profile(request):
     return render(request, 'app/profile.html', { 'active': 'profile'})

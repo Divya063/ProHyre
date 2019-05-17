@@ -1,0 +1,110 @@
+{% extends "base.html" %}
+{% load static %}
+{% block style %}
+<link rel="stylesheet" href="{% static 'app/css/jobs.css' %}">
+<link rel="stylesheet" href="{% static 'app/css/candidates.css' %}">
+{% endblock %}
+{% block content %}
+<div class="content">
+    {% include "./includes/sidebar.html" %}
+    <div class="dash-content">
+        <div class="section candidate">
+            <div id="heading">
+                <div>
+                    <h1>Sudhanshu Gautam</h1>
+                    <h4>Delhi, India</h4>
+                </div>
+                <div id="right">
+                    <h4>Senior Software Engineer</h4>
+                </div>
+            </div>
+            <div>
+                <h2>Screening Test</h2>
+                <div class="underline"></div>
+                <div class="analysis">
+                    <table>
+                        <tr>
+                            <td><h4>Section I</h4></td>
+                            <td><h4>Aptitude</h4></td>
+                            <td><span>43/50</span></td>
+                        </tr>
+                        <tr>
+                            <td><h4>Section II</h4></td>
+                            <td><h4>Advanced Reasoning</h4></td>
+                            <td><span>20/25</span></td>
+                        </tr>
+                        <tr>
+                            <td><h4>Section III</h4></td>
+                            <td><h4>Programming</h4></td>
+                            <td><span>75/100</span></td>
+                        </tr>
+                    </table>
+                    <div>
+                        <h4>Performed <span>90%</span> better than other candidates.</h4>
+                        <h4>Ranks <span>10 out of 100</span> candidates</h4>
+                    </div>
+                </div>
+                <h2>Round I - Interview</h2>
+                <div class="underline"></div>
+                <h4>Interviewed by <span>Christopher L. Robin</span></h4>
+                <div class="analysis">
+                    <table>
+                        <tr>
+                            <td><h4>Behavioural</h4></td>
+                            <td><span>4/5</span></td>
+                        </tr>
+                        <tr>
+                            <td><h4>Concepts</h4></td>
+                            <td><span>8/10</span></td>
+                        </tr>
+                        <tr>
+                            <td><h4>Writing Code</h4></td>
+                            <td><span>3/5</span></td>
+                        </tr>
+                    </table>
+                    <div>
+                        <h4>Performed <span>90%</span> better than other candidates.</h4>
+                        <h4>Ranks <span>3 out of 13</span> candidates</h4>
+                        <h5>Comments</h5>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat.
+                        </p>
+                    </div>
+                </div>
+                <h2>Round II - Interview</h2>
+                <div class="underline"></div>
+                <h4>Interviewed by <span>Christopher L. Robin</span></h4>
+                <div class="analysis">
+                    <table>
+                        <tr>
+                            <td><h4>Behavioural</h4></td>
+                            <td><span>4/5</span></td>
+                        </tr>
+                        <tr>
+                            <td><h4>Concepts</h4></td>
+                            <td><span>8/10</span></td>
+                        </tr>
+                        <tr>
+                            <td><h4>Writing Code</h4></td>
+                            <td><span>3/5</span></td>
+                        </tr>
+                    </table>
+                    <div>
+                        <h4>Performed <span>90%</span> better than other candidates.</h4>
+                        <h4>Ranks <span>3 out of 13</span> candidates</h4>
+                        <h5>Comments</h5>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% include "./includes/footer.html" %}
+{% endblock %}
