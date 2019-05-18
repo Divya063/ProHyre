@@ -19,7 +19,7 @@ from .views import Resume
 
 urlpatterns = [
     path('res/', Resume.as_view(), name='res'),
-    path('resume_new/', views.ResumeCreateView.as_view(), name='resume_new'),
-    path('res/<int:pk>/', views.ResumeUpdateView.as_view(), name='resume_update'),
+    #path('resume_new/', views.ResumeCreateView.as_view(), name='resume_new'),
+    #path('res/<int:pk>/', views.ResumeUpdateView.as_view(), name='resume_update'),
     
 ]
