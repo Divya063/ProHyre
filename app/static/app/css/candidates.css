@@ -1,0 +1,98 @@
+.double-section {
+    grid-row: 2;
+}
+
+.search {
+    grid-column: 2;
+    display: grid;
+    text-align: center;
+    grid-template-columns: auto;
+}
+
+.search input {
+    grid-column: 2;
+    border-radius: 12px;
+    border: none;
+    background-color: #F7F7F7;
+    font-size: 16px;
+    padding: 20px;
+    color: #434343;
+}
+
+.bargraph {
+    background: url("../images/bargraph.png") no-repeat;
+    height: 300px;
+    background-size: contain;
+    background-position: center;
+}
+
+.piechart {
+    background: url("../images/piechart.png") no-repeat;
+    height: 300px;
+    background-size: contain;
+    background-position: center;
+}
+
+.candidates {
+    grid-row: 3;
+    grid-column: 2;
+}
+
+.candidate {
+    grid-column: 2;
+}
+
+.candidate span {
+    font-size: 16px;
+}
+
+.candidate h4 {
+    font-weight: 300;
+    margin: 0;
+    font-size: 16px;
+}
+
+.candidate #right {
+    text-align: right;
+    grid-column: 2;
+}
+
+.candidate #heading {
+    display: grid;
+    grid-template-columns: auto;
+    border-bottom: 1px solid #e8e8e8;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+}
+
+.candidate h2 {
+    font-weight: 600;
+    font-size: 20px;
+    margin: 0;
+}
+
+.candidate h5 {
+    font-weight: 500;
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.analysis {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 30px 0;
+    grid-gap: 20px;
+}
+
+table, td {
+    border: 1px solid #e8e8e8;
+    border-collapse: collapse;
+}
+
+table h4 {
+    padding: 10px;
+}
+
+.table span {
+    margin: auto;
+}

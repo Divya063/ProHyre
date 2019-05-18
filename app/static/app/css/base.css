@@ -21,6 +21,8 @@ a {
   border-bottom-right-radius: 100px;
   box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.05);
   position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 #header-title {
@@ -95,6 +97,22 @@ a {
 .content {
     display: grid;
     grid-template-columns: 1fr 5fr;
+}
+
+.section {
+    background-color: #fff;
+    box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.05);
+    padding: 30px;
+    border-radius: 12px;
+    margin: 0 0 50px 0;
+}
+
+.double-section {
+    grid-row: 3;
+    grid-column: 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
 }
 
 @media screen and (max-width: 800px) {
