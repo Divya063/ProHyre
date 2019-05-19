@@ -106,9 +106,56 @@ a {
     width: auto;
     border-radius: 12px;
     box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.05);
-    right: 50px;
+    right: 120px;
     visibility: hidden;
     top: 80px;
+    z-index: 101;
+}
+
+.signup-form {
+    grid-column: 2;
+    margin: 30px 0;
+}
+
+.signup-form h1 {
+    margin: 0;
+}
+
+.signup-form label {
+    font-weight: 600;
+}
+
+.signup-form input {
+    padding: 15px;
+    font-size: 16px;
+    border-radius: 12px;
+    border: none;
+    background: #f2f5fa;
+}
+
+.signup-form .errorlist {
+    font-weight: 600;
+    color: #8D6DFF;
+}
+
+.signup-form span {
+    color: #339AD1;
+}
+
+.underline {
+    width: 70px;
+    height: 7px;
+    background: linear-gradient(to right, rgba(183, 162, 255, 1), rgba(183, 162, 255, 0.5));
+    margin: 10px 20px;
+    border-radius: 10px;
+}
+
+form {
+    background: #fff;
+    width: 60vw;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.05);
 }
 
 .visible {

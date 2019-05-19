@@ -69,14 +69,6 @@
     font-weight: 400;
 }
 
-.underline {
-    width: 70px;
-    height: 7px;
-    background: linear-gradient(to right, rgba(183, 162, 255, 1), rgba(183, 162, 255, 0.5));
-    margin: 10px 20px;
-    border-radius: 10px;
-}
-
 .section span {
     font-size: 0.8rem;
     color: #339AD1;
