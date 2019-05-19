@@ -13,6 +13,9 @@ def index(request):
 def dash(request):
     return render(request, 'app/dash.html', { 'active': 'dash'})
 
+def candidate_dash(request):
+    return render(request, 'candidates/dash.html', {'active': 'dash'})
+
 def jobs(request):
     return render(request, 'app/jobs.html', { 'active': 'jobs'})
 
@@ -41,9 +44,9 @@ class SignUpView(TemplateView):
 def home(request):
     if request.user.is_authenticated:
         if request.user.is_hr:
-            return redirect('candidates')
+            return redirect('dash')
         else:
-            return redirect('profile')
+            return redirect('candidate_dash')
     return render(request, 'login')
 
 class HrSignUpView(CreateView):
@@ -58,7 +61,7 @@ class HrSignUpView(CreateView):
     def form_valid(self, form):
         user = form.save()
         login(self.request, user)
-        return redirect('candidates')
+        return redirect('dash')
 
 class CandidateSignUpView(CreateView):
     model = User
@@ -71,5 +74,6 @@ class CandidateSignUpView(CreateView):
 
     def form_valid(self, form):
         user = form.save()
+        user.is_staff=True
         login(self.request, user)
-        return redirect('profile')
+        return redirect('candidate_dash')

@@ -1,4 +1,4 @@
-from django.contrib import admin
+from ProHyre.admin import myadmin
 
 # Register your models here.
 from .models import School, Company, Education,\
@@ -6,12 +6,12 @@ from .models import School, Company, Education,\
 	Skill, SchoolProject, Objective
 
 
-admin.site.register(School, list_display=['name'])
-admin.site.register(Company)
-admin.site.register(Education)
-admin.site.register(Objective)
-admin.site.register(Experience)
-admin.site.register(UserProfile)
-admin.site.register(Address)
-admin.site.register(Skill)
-admin.site.register(SchoolProject)
+myadmin.register(School, list_display=['name'])
+myadmin.register(Company)
+myadmin.register(Education)
+myadmin.register(Objective)
+myadmin.register(Experience)
+myadmin.register(UserProfile)
+myadmin.register(Address)
+myadmin.register(Skill)
+myadmin.register(SchoolProject)
