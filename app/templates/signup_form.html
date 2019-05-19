@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{% static 'app/css/base.css' %}">
+    <script src="{% static 'app/js/base.js' %}" ></script>
+    <title>ProHyre</title>
+</head>
+<body>
+    <div id="header">
+        <h1 id="header-title"><span>ProH</span>YRE</h1>
+    </div>
+ {% csrf_token %}
+  <h2>Sign up for a free account</h2>
+  <p class="lead">Select below the type of account you want to create</p>
+  <a href="{% url 'candidates_signup' %}" class="btn btn-student btn-lg" role="button">I'm a Candidate</a>
+  <a href="{% url 'hr_signup' %}" class="btn btn-hr btn-lg" role="button">I'm a Hiring Manager</a>
+  </body>
+
+</html>

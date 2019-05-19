@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{% static 'app/css/base.css' %}">
+    <script src="{% static 'app/js/base.js' %}" ></script>
+    <title>ProHyre</title>
+</head>
+<body>
+    <div id="header">
+        <h1 id="header-title"><span>ProH</span>YRE</h1>
+    </div>
+  <h2>Sign up</h2>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Sign up</button>
+  </form>
+</body>
+</html>

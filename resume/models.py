@@ -1,5 +1,5 @@
 from django.db import models
-from django.contrib.auth.models import User
+from ProHyre import settings
 
 # Create your models here.
 class Address(models.Model):
@@ -97,7 +97,7 @@ class Objective(models.Model):
 
 
 class UserProfile(models.Model):
-	user = models.OneToOneField(User,  on_delete=models.CASCADE)
+	user = models.OneToOneField(settings.AUTH_USER_MODEL,  on_delete=models.CASCADE)
 	phone = models.CharField('Phone Number', max_length=20)
 	profession = models.CharField('Profession', max_length=40) # Professional Title to the work you do
 	address = models.ForeignKey(Address, default='',  on_delete=models.CASCADE)

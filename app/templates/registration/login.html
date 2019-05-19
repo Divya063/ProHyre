@@ -1,6 +1,35 @@
-<h2>Login</h2>
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{% static 'app/css/base.css' %}">
+    <script src="{% static 'app/js/base.js' %}" ></script>
+    <title>ProHyre</title>
+</head>
+<body>
+    <div id="header">
+        <h1 id="header-title"><span>ProH</span>YRE</h1>
+    </div>
+<h2> Login </h2>
+{% if form.errors %}
+<p>Your username and password didn't match. Please try again.</p>
+{% endif %}
 <form method="post">
-  {% csrf_token %}
-  {{ form.as_p }}
-  <button type="submit">Login</button>
+{% csrf_token %}
+<table>
+<tr>
+    <td class="fonts">{{ form.username.label_tag }}</td>
+    <td>{{ form.username }}</td>
+</tr>
+<tr>
+    <td>{{ form.password.label_tag }}</td>
+    <td>{{ form.password }}</td>
+</tr>
+</table>
+<button class="act-login" id="employer">
+                Submit
+            </button>
+<input type="hidden" name="next" value="{{ next }}" />
 </form>
+</body>
+</html>

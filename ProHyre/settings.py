@@ -34,13 +34,13 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'app',
     'resume',
+    'crispy_forms',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'accounts.apps.AccountsConfig',
 ]
 
 MIDDLEWARE = [
@@ -121,5 +121,13 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
+AUTH_USER_MODEL = 'app.User'
+
 STATIC_URL = '/static/'
-LOGIN_REDIRECT_URL = '/'
+LOGIN_URL = 'login'
+
+LOGOUT_URL = 'logout'
+
+LOGIN_REDIRECT_URL = 'home'
+
+LOGOUT_REDIRECT_URL = 'home'
