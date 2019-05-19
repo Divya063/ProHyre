@@ -5,35 +5,44 @@ from .forms import HrSignUpForm, CandidateSignUpForm
 from django.views.generic import TemplateView, CreateView
 from django.contrib.auth import login
 from django.shortcuts import get_object_or_404, redirect, render
-
+from django.contrib.auth.decorators import login_required
 
 def index(request):
     return render(request, 'app/home.html')
 
+@login_required
 def dash(request):
     return render(request, 'app/dash.html', { 'active': 'dash'})
 
+@login_required
 def candidate_dash(request):
     return render(request, 'candidates/dash.html', {'active': 'dash'})
 
+@login_required
 def jobs(request):
     return render(request, 'app/jobs.html', { 'active': 'jobs'})
 
+@login_required
 def job_desc(request):
     return render(request, 'app/job_desc.html', { 'active': 'jobs'})
 
+@login_required
 def candidates(request):
     return render(request, 'app/candidates.html', { 'active': 'candidates'})
 
+@login_required
 def candidates_analysis(request):
     return render(request, 'app/candidates_analysis.html', { 'active': 'candidates'})
 
+@login_required
 def candidate(request):
     return render(request, 'app/candidate.html', { 'active': 'candidate'})
 
+@login_required
 def profile(request):
     return render(request, 'app/profile.html', { 'active': 'profile'})
 
+@login_required
 def settings(request):
     return render(request, 'app/settings.html', { 'active': 'settings'})
 
