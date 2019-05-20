@@ -1,3 +1,4 @@
+
 {% extends "base.html" %}
 {% load static %}
 {% block style %}
@@ -55,38 +56,53 @@
             </a>
         </div>
         <div class="section candidates">
-            <h1>Active Candidates <a href="candidates"><span>View All</span></a></h1>
+            <h1>Active Candidates <span>View All</span></h1>
             <div class="underline"></div>
             <ul>
-                {% for item in res.candidates %}
                 <li>
                     <div class="left">
-                        <a href="candidates/candidate"><h4>{{ item.fullName }}</h4></a>
-                        <p>{{ item.address }}</p>
+                        <h4>Sudhanshu Gautam</h4>
+                        <p>Delhi, India</p>
                     </div>
                     <div class="right">
-                        <h4>{{ item.jobRole }}</h4>
-                        <p>{{ item.status }}</p>
+                        <h4>Software Engineer I</h4>
+                        <p>Pending Feedback</p>
                     </div>
                 </li>
-                {% endfor %}
+                <li>
+                    <div class="left">
+                        <h4>Sejal Kataria</h4>
+                        <p>Bangalore, India</p>
+                    </div>
+                    <div class="right">
+                        <h4>User Experience Engineer</h4>
+                        <p>Pending Feedback</p>
+                    </div>
+                </li>
             </ul>
         </div>
         <div class="section jobs">
-            <h1>Active Job Postings <a href="jobs"><span>View All</span></a></h1>
+            <h1>Active Job Postings <span>View All</span></h1>
             <div class="underline"></div>
             <ul>
-                {% for item in res.jobs %}
-                <a href="job_desc"><li>
+                <li>
                     <div class="left">
-                        <h4>{{ item.jobRole }}</h4>
-                        <p>{{ item.location }}</p>
+                        <h4>Software Developer I</h4>
+                        <p>Bangalore, India</p>
                     </div>
                     <div class="right">
-                        <p>{{ item.posted_at }}</p>
+                        <p>5 days ago</p>
                     </div>
-                </li></a>
-                {% endfor %}
+                </li>
+                <li>
+                    <div class="left">
+                        <h4>User Experience Engineer</h4>
+                        <p>Bangalore, India</p>
+                    </div>
+                    <div class="right">
+                        <p>12 days ago</p>
+                    </div>
+                </li>
             </ul>
         </div>
     </div>

@@ -14,31 +14,211 @@ def index(request):
 
 @login_required
 def dash(request):
-    return render(request, 'app/dash.html', { 'active': 'dash'})
+    res = {
+        'candidates': [
+            {
+                'fullName': 'Sudhanshu Gautam',
+                'address': 'Delhi, India',
+                'jobRole': 'Sofware Engineer I',
+                'status': 'Feedback Pending'
+            },
+            {
+                'fullName': 'Sejal Kataria',
+                'address': 'Delhi, India',
+                'jobRole': 'User Experience Engineer',
+                'status': 'Upcoming Interview II'
+            },
+            {
+                'fullName': 'Aman Bhardwaj',
+                'address': 'Mumbai, India',
+                'jobRole': 'UI/UX Designer',
+                'status': 'Feedback Pending'
+            }
+        ],
+        'jobs': [
+            {
+                'jobRole': 'Software Engineer I',
+                'location': 'Bangalore, India',
+                'posted_at': '5 days ago'
+            },
+            {
+                'jobRole': 'Senior Sofware Engineer',
+                'location': 'Bangalore, India',
+                'posted_at': '13 days ago'
+            },
+            {
+                'jobRole': 'Business Intern',
+                'location': 'Bangalore, India',
+                'posted_at': '1 month ago'
+            }
+        ]
+    }
+    return render(request, 'app/dash.html', { 'active': 'dash', 'res': res })
 
 @login_required
 def candidate_dash(request):
     return render(request, 'candidates/dash.html', {'active': 'dash'})
 
 @login_required
+def applied_jobs(request):
+    return render(request, 'candidates/applied_jobs.html', {'active': 'jobs'})
+
+@login_required
 def jobs(request):
-    return render(request, 'app/jobs.html', { 'active': 'jobs'})
+    res = {
+        'activeJobs': [
+            {
+                'jobRole': 'Software Engineer I',
+                'location': 'Bangalore, India',
+                'posted_at': '5 days ago'
+            },
+            {
+                'jobRole': 'User Experience Engineer',
+                'location': 'Bangalore, India',
+                'posted_at': '13 days ago'
+            },
+            {
+                'jobRole': 'Business Intern',
+                'location': 'Bangalore, India',
+                'posted_at': '1 month ago'
+            }
+        ],
+        'archivedJobs': [
+            {
+                'jobRole': 'Senior Software Engineer',
+                'location': 'Bangalore, India',
+                'posted_at': '5 months ago'
+            },
+            {
+                'jobRole': 'Senior Sofware Engineer',
+                'location': 'Bangalore, India',
+                'posted_at': '10 months ago'
+            },
+        ]
+    }
+    return render(request, 'app/jobs.html', { 'active': 'jobs', 'res': res })
 
 @login_required
 def job_desc(request):
-    return render(request, 'app/job_desc.html', { 'active': 'jobs'})
+    res = {
+        'activeCandidates': [
+            {
+                'fullName': 'Sudhanshu Gautam',
+                'address': 'Delhi, India',
+                'jobRole': 'Sofware Engineer I',
+                'status': 'Feedback Pending'
+            },
+            {
+                'fullName': 'Sejal Kataria',
+                'address': 'Delhi, India',
+                'jobRole': 'User Experience Engineer',
+                'status': 'Upcoming Interview II'
+            },
+            {
+                'fullName': 'Aman Bhardwaj',
+                'address': 'Mumbai, India',
+                'jobRole': 'UI/UX Designer',
+                'status': 'Feedback Pending'
+            }
+        ],
+        'acceptedCandidates': [
+            {
+                'fullName': 'Sudhanshu Gautam',
+                'address': 'Delhi, India',
+                'jobRole': 'Sofware Engineer I',
+                'status': 'Feedback Pending'
+            },
+            {
+                'fullName': 'Sejal Kataria',
+                'address': 'Delhi, India',
+                'jobRole': 'User Experience Engineer',
+                'status': 'Upcoming Interview II'
+            },
+            {
+                'fullName': 'Aman Bhardwaj',
+                'address': 'Mumbai, India',
+                'jobRole': 'UI/UX Designer',
+                'status': 'Feedback Pending'
+            }
+        ],
+    }
+    return render(request, 'app/job_desc.html', { 'active': 'jobs', 'res': res})
 
 @login_required
 def candidates(request):
-    return render(request, 'app/candidates.html', { 'active': 'candidates'})
+    res = {
+        'activeCandidates': [
+            {
+                'fullName': 'Sudhanshu Gautam',
+                'address': 'Delhi, India',
+                'jobRole': 'Sofware Engineer I',
+                'status': 'Feedback Pending'
+            },
+            {
+                'fullName': 'Sejal Kataria',
+                'address': 'Delhi, India',
+                'jobRole': 'User Experience Engineer',
+                'status': 'Upcoming Interview II'
+            },
+            {
+                'fullName': 'Aman Bhardwaj',
+                'address': 'Mumbai, India',
+                'jobRole': 'UI/UX Designer',
+                'status': 'Feedback Pending'
+            }
+        ],
+        'acceptedCandidates': [
+            {
+                'fullName': 'Sudhanshu Gautam',
+                'address': 'Delhi, India',
+                'jobRole': 'Sofware Engineer I',
+                'status': 'Feedback Pending'
+            },
+            {
+                'fullName': 'Sejal Kataria',
+                'address': 'Delhi, India',
+                'jobRole': 'User Experience Engineer',
+                'status': 'Upcoming Interview II'
+            },
+            {
+                'fullName': 'Aman Bhardwaj',
+                'address': 'Mumbai, India',
+                'jobRole': 'UI/UX Designer',
+                'status': 'Feedback Pending'
+            }
+        ],
+    }
+    return render(request, 'app/candidates.html', { 'active': 'candidates', 'res': res })
 
 @login_required
 def candidates_analysis(request):
-    return render(request, 'app/candidates_analysis.html', { 'active': 'candidates'})
+    res = {
+        'activeCandidates': [
+            {
+                'fullName': 'Sudhanshu Gautam',
+                'address': 'Delhi, India',
+                'jobRole': 'Sofware Engineer I',
+                'status': 'Feedback Pending'
+            },
+            {
+                'fullName': 'Sejal Kataria',
+                'address': 'Delhi, India',
+                'jobRole': 'User Experience Engineer',
+                'status': 'Upcoming Interview II'
+            },
+            {
+                'fullName': 'Aman Bhardwaj',
+                'address': 'Mumbai, India',
+                'jobRole': 'UI/UX Designer',
+                'status': 'Feedback Pending'
+            }
+        ]
+    }
+    return render(request, 'app/candidates_analysis.html', { 'active': 'candidates', 'res': res })
 
 @login_required
 def candidate(request):
-    return render(request, 'app/candidate.html', { 'active': 'candidate'})
+    return render(request, 'app/candidate.html', { 'active': 'candidates'})
 
 @login_required
 def profile(request):
@@ -99,5 +279,3 @@ def error_500(request, template_name="500.html"):
     response = render_to_response("500.html")
     response.status_code = 500
     return response
-
-

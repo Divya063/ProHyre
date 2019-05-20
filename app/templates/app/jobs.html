@@ -11,84 +11,34 @@
             <h1>Active Jobs</h1>
             <div class="underline"></div>
             <ul>
+                {% for item in res.activeJobs %}
                 <a href="job_desc"><li>
                     <div class="left">
-                        <h4>Software Developer I</h4>
-                        <p>Bangalore, India</p>
+                        <h4>{{ item.jobRole }}</h4>
+                        <p>{{ item.location }}</p>
                     </div>
                     <div class="right">
-                        <p>5 days ago</p>
+                        <p>{{ item.posted_at }}</p>
                     </div>
                 </li></a>
-                <li>
-                    <div class="left">
-                        <h4>User Experience Engineer</h4>
-                        <p>Bangalore, India</p>
-                    </div>
-                    <div class="right">
-                        <p>12 days ago</p>
-                    </div>
-                </li>
-                <li>
-                    <div class="left">
-                        <h4>Software Developer I</h4>
-                        <p>Bangalore, India</p>
-                    </div>
-                    <div class="right">
-                        <p>30 days ago</p>
-                    </div>
-                </li>
-                <li>
-                    <div class="left">
-                        <h4>User Experience Engineer</h4>
-                        <p>Bangalore, India</p>
-                    </div>
-                    <div class="right">
-                        <p>1 month ago</p>
-                    </div>
-                </li>
-                <li>
-                    <div class="left">
-                        <h4>Software Developer I</h4>
-                        <p>Bangalore, India</p>
-                    </div>
-                    <div class="right">
-                        <p>2 months ago</p>
-                    </div>
-                </li>
-                <li>
-                    <div class="left">
-                        <h4>User Experience Engineer</h4>
-                        <p>Bangalore, India</p>
-                    </div>
-                    <div class="right">
-                        <p>4 months ago</p>
-                    </div>
-                </li>
+                {% endfor %}
             </ul>
         </div>
         <div class="section archived-jobs">
             <h1>Archived Jobs</h1>
             <div class="underline"></div>
             <ul>
-                <li>
+                {% for item in res.archivedJobs %}
+                <a href="job_desc"><li>
                     <div class="left">
-                        <h4>Software Developer I</h4>
-                        <p>Bangalore, India</p>
+                        <h4>{{ item.jobRole }}</h4>
+                        <p>{{ item.location }}</p>
                     </div>
                     <div class="right">
-                        <p>5 months ago</p>
+                        <p>{{ item.posted_at }}</p>
                     </div>
-                </li>
-                <li>
-                    <div class="left">
-                        <h4>User Experience Engineer</h4>
-                        <p>Bangalore, India</p>
-                    </div>
-                    <div class="right">
-                        <p>12 months ago</p>
-                    </div>
-                </li>
+                </li></a>
+                {% endfor %}
             </ul>
         </div>
     </div>

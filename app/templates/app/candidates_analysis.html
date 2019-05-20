@@ -30,46 +30,18 @@
             <h1>Active Candidates</h1>
             <div class="underline"></div>
             <ul>
+                {% for item in res.activeCandidates %}
                 <li>
                     <div class="left">
-                        <a href="candidate"><h4>Sudhanshu Gautam</h4></a>
-                        <p>Delhi, India</p>
+                        <a href="candidate"><h4>{{ item.fullName }}</h4></a>
+                        <p>{{ item.address }}</p>
                     </div>
                     <div class="right">
-                        <h4>Software Engineer I</h4>
-                        <p>Pending Feedback</p>
+                        <h4>{{ item.jobRole }}</h4>
+                        <p>{{ item.status }}</p>
                     </div>
                 </li>
-                <li>
-                    <div class="left">
-                        <h4>Sejal Kataria</h4>
-                        <p>Bangalore, India</p>
-                    </div>
-                    <div class="right">
-                        <h4>User Experience Engineer</h4>
-                        <p>Pending Feedback</p>
-                    </div>
-                </li>
-                <li>
-                    <div class="left">
-                        <h4>Sudhanshu Gautam</h4>
-                        <p>Delhi, India</p>
-                    </div>
-                    <div class="right">
-                        <h4>Software Engineer I</h4>
-                        <p>Pending Feedback</p>
-                    </div>
-                </li>
-                <li>
-                    <div class="left">
-                        <h4>Sejal Kataria</h4>
-                        <p>Bangalore, India</p>
-                    </div>
-                    <div class="right">
-                        <h4>User Experience Engineer</h4>
-                        <p>Pending Feedback</p>
-                    </div>
-                </li>
+                {% endfor %}
             </ul>
         </div>
     </div>
