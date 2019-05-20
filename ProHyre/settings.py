@@ -34,7 +34,6 @@ ALLOWED_HOSTS = ['localhost', 'divya063.pythonanywhere.com', '*']
 INSTALLED_APPS = [
     'app',
     'resume',
-    'crispy_forms',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
