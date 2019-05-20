@@ -57,11 +57,46 @@ def dash(request):
 
 @login_required
 def candidate_dash(request):
-    return render(request, 'candidates/dash.html', {'active': 'dash'})
-
-@login_required
-def applied_jobs(request):
-    return render(request, 'candidates/applied_jobs.html', {'active': 'jobs'})
+    res = {
+        'activeApplications': [
+            {
+                'jobRole': 'Software Engineer I',
+                'location': 'Bangalore, India',
+                'posted_at': '5 days ago',
+                'status': 'Pending Feedback'
+            },
+            {
+                'jobRole': 'User Experience Engineer',
+                'location': 'Bangalore, India',
+                'posted_at': '13 days ago',
+                'status': 'Upcoming Interview'
+            },
+            {
+                'jobRole': 'Business Intern',
+                'location': 'Bangalore, India',
+                'posted_at': '1 month ago',
+                'status': 'Upcoming Screening Test'
+            }
+        ],
+        'pastApplications': [
+            {
+                'jobRole': 'Software Engineer I',
+                'location': 'Bangalore, India',
+                'posted_at': '5 days ago'
+            },
+            {
+                'jobRole': 'User Experience Engineer',
+                'location': 'Bangalore, India',
+                'posted_at': '13 days ago'
+            },
+            {
+                'jobRole': 'Business Intern',
+                'location': 'Bangalore, India',
+                'posted_at': '1 month ago'
+            }
+        ],
+    }
+    return render(request, 'candidates/dash.html', {'active': 'dash', 'res': res })
 
 @login_required
 def jobs(request):
@@ -97,6 +132,49 @@ def jobs(request):
         ]
     }
     return render(request, 'app/jobs.html', { 'active': 'jobs', 'res': res })
+
+@login_required
+def search_jobs(request):
+    res = {
+        'activeJobs': [
+            {
+                'jobRole': 'Software Engineer I',
+                'location': 'Bangalore, India',
+                'posted_at': '5 days ago'
+            },
+            {
+                'jobRole': 'User Experience Engineer',
+                'location': 'Tokyo, Japan',
+                'posted_at': '13 days ago'
+            },
+            {
+                'jobRole': 'Business Intern',
+                'location': 'Bangalore, India',
+                'posted_at': '1 month ago'
+            },
+            {
+                'jobRole': 'Engineering Apprentice',
+                'location': 'Bangalore, India',
+                'posted_at': '1 month ago'
+            },
+            {
+                'jobRole': 'Sales Intern',
+                'location': 'Beijing, China',
+                'posted_at': '2 months ago'
+            },
+            {
+                'jobRole': 'Engineering Apprentice',
+                'location': 'Bangalore, India',
+                'posted_at': '1 month ago'
+            },
+            {
+                'jobRole': 'Sales Intern',
+                'location': 'Bangalore, India',
+                'posted_at': '2 months ago'
+            }
+        ]
+    }
+    return render(request, 'candidates/search_jobs.html', { 'active': 'jobs', 'res': res })
 
 @login_required
 def job_desc(request):
@@ -143,6 +221,12 @@ def job_desc(request):
         ],
     }
     return render(request, 'app/job_desc.html', { 'active': 'jobs', 'res': res})
+
+@login_required
+def apply_job(request):
+    res = {
+    }
+    return render(request, 'candidates/apply_job.html', { 'active': 'jobs', 'res': res})
 
 @login_required
 def candidates(request):
@@ -219,6 +303,11 @@ def candidates_analysis(request):
 @login_required
 def candidate(request):
     return render(request, 'app/candidate.html', { 'active': 'candidates'})
+
+@login_required
+def application_status(request):
+    return render(request, 'candidates/application_status.html', { 'active': 'jobs'})
+
 
 @login_required
 def profile(request):

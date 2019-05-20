@@ -25,6 +25,7 @@ a {
     padding-left: 4rem;
     font-weight: 400;
     margin-top: 4px;
+    border: none;
 }
 
 svg {

@@ -1,0 +1,9 @@
+.postings button {
+    font-size: 14px;
+    margin: 0;
+    padding: 10px 15px;
+}
+
+.postings p {
+    padding: 2px;
+}

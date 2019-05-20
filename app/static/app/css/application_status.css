@@ -1,0 +1,28 @@
+.job-desc {
+    grid-row: 2;
+    grid-column: 2;
+}
+
+.double-section {
+    grid-row: 1;
+}
+
+.bargraph {
+    background: #fff;
+}
+
+.bargraph table{
+    width: 100%;
+}
+
+.bargraph h4 {
+    margin: 0;
+}
+
+.bargraph img {
+    width: 300px;
+}
+
+.analysis {
+    display: block;
+}

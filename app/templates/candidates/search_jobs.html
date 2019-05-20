@@ -1,0 +1,33 @@
+
+{% extends "base.html" %}
+{% load static %}
+{% block style %}
+<link rel="stylesheet" href="{% static 'app/css/dash.css' %}">
+<link rel="stylesheet" href="{% static 'app/css/applied_jobs.css' %}">
+{% endblock %}
+{% block content %}
+<div class="content">
+    {% include "./includes/sidebar.html" %}
+    <div class="dash-content">
+        <div class="section jobs postings">
+            <h1>Active Jobs</h1>
+            <div class="underline"></div>
+            <ul>
+                {% for item in res.activeJobs %}
+                <a href="apply_job"><li>
+                    <div class="left">
+                        <h4>{{ item.jobRole }}</h4>
+                        <p>{{ item.location }}</p>
+                    </div>
+                    <div class="right">
+                    <button class="login-btn">Apply</button>
+                        <p>{{ item.posted_at }}</p>
+                    </div>
+                </li></a>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
+{% include "./includes/footer.html" %}
+{% endblock %}

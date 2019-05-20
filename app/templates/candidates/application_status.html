@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+{% load static %}
+{% block style %}
+<link rel="stylesheet" href="{% static 'app/css/dash.css' %}">
+<link rel="stylesheet" href="{% static 'app/css/candidates.css' %}">
+<link rel="stylesheet" href="{% static 'app/css/application_status.css' %}">
+{% endblock %}
+{% block content %}
+<div class="content">
+    {% include "./includes/sidebar.html" %}
+    <div class="dash-content">
+        <div class="double-section">
+            <div class="section">
+                <h1>Overall Scoring</h1>
+                <div class="underline"></div>
+                <div class="bargraph">
+                    <img src="{% static 'app/images/score_graph.png' %}" />
+                    <table>
+                        <tr>
+                            <td><h4>Behavioural</h4></td>
+                            <td><span>4/5</span></td>
+                        </tr>
+                        <tr>
+                            <td><h4>Concepts</h4></td>
+                            <td><span>8/10</span></td>
+                        </tr>
+                        <tr>
+                            <td><h4>Writing Code</h4></td>
+                            <td><span>3/5</span></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="section">
+                <h1>Feedback</h1>
+                <div class="underline"></div>
+                <div class="analysis">
+                    <div>
+                        <h4>Performed <span>90%</span> better than other candidates.</h4>
+                        <h4>Ranks <span>3 out of 13</span> candidates</h4>
+                        <h4>Comments</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section job-desc">
+            <div id="heading">
+                <div id="left">
+                    <h1>Senior Software Engineer</h1>
+                    <h4>Bangalore, India</h4>
+                </div>
+                <div id="right">
+                    <h4>2 months ago</h4>
+                </div>
+            </div>
+            <p>Google aspires to be an organization that reflects the globally diverse audience that our products and technology serve. We believe that in
+                addition to hiring the best talent, a diversity of perspectives, ideas and cultures leads to the creation of better products and services.
+                <br><br>
+                Google’s software engineers develop the next-generation technologies that change how billions of users connect, explore, and interact with
+                information and one another. Our products need to handle information at massive scale, and extend well beyond web search.
+            </p>
+            <div id="footer">View more</div>
+        </div>
+    </div>
+</div>
+{% include "./includes/footer.html" %}
+{% endblock %}
