@@ -6,6 +6,8 @@ from django.views.generic import TemplateView, CreateView
 from django.contrib.auth import login
 from django.shortcuts import get_object_or_404, redirect, render
 from django.contrib.auth.decorators import login_required
+from django.shortcuts import render_to_response
+
 
 def index(request):
     return render(request, 'app/home.html')
@@ -86,3 +88,16 @@ class CandidateSignUpView(CreateView):
         user.is_staff=True
         login(self.request, user)
         return redirect('candidate_dash')
+
+
+def error_404(request, exception, template_name="404.html"):
+    response = render_to_response("404.html")
+    response.status_code = 404
+    return response
+
+def error_500(request, template_name="500.html"):
+    response = render_to_response("500.html")
+    response.status_code = 500
+    return response
+
+

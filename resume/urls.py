@@ -17,6 +17,8 @@ from django.urls import path
 from . import views
 from .views import Resume
 
+
+
 urlpatterns = [
     path('res/', Resume.as_view(), name='res'),
     #path('resume_new/', views.ResumeCreateView.as_view(), name='resume_new'),

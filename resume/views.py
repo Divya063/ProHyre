@@ -9,8 +9,6 @@ from django.views.generic import ListView, CreateView, UpdateView
 
 import sys
 
-
-
 class Resume(TemplateView):
 	template_name = 'resume.html'
 

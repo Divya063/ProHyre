@@ -13,12 +13,18 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+
 from django.contrib import admin
 from django.urls import include, path
 from ProHyre.admin import myadmin
 from django.views.generic.base import TemplateView
+from django.conf.urls import handler404, handler500
+from app import views 
 
 admin.autodiscover()
+
+handler404 = views.error_404
+handler500 = views.error_500
 
 
 urlpatterns = [
