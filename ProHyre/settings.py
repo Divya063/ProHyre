@@ -24,7 +24,7 @@ SETTINGS_PATH = os.path.dirname(os.path.dirname(__file__))
 SECRET_KEY = '1)%(q(b3_l___y^_i&e(=gjf_9g(1im(v(u+fei@h@-&rp#38='
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['localhost', 'divya063.pythonanywhere.com', '*']
 

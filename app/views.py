@@ -1,13 +1,14 @@
 from django.http import HttpResponse
 from django.shortcuts import render
 from .models import User
-from .forms import HrSignUpForm, CandidateSignUpForm
+from .models import Job
+from .forms import HrSignUpForm, CandidateSignUpForm, CreateJobForm
 from django.views.generic import TemplateView, CreateView
 from django.contrib.auth import login
 from django.shortcuts import get_object_or_404, redirect, render
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render_to_response
-
+import datetime
 
 def index(request):
     return render(request, 'app/home.html')
@@ -100,24 +101,10 @@ def candidate_dash(request):
 
 @login_required
 def jobs(request):
+    all_jobs = Job.objects.all().values('job_role', 'job_desc', 'posted_on', 'location')
+    print(all_jobs)
     res = {
-        'activeJobs': [
-            {
-                'jobRole': 'Software Engineer I',
-                'location': 'Bangalore, India',
-                'posted_at': '5 days ago'
-            },
-            {
-                'jobRole': 'User Experience Engineer',
-                'location': 'Bangalore, India',
-                'posted_at': '13 days ago'
-            },
-            {
-                'jobRole': 'Business Intern',
-                'location': 'Bangalore, India',
-                'posted_at': '1 month ago'
-            }
-        ],
+        'activeJobs': all_jobs,
         'archivedJobs': [
             {
                 'jobRole': 'Senior Software Engineer',
@@ -357,6 +344,24 @@ class CandidateSignUpView(CreateView):
         user.is_staff=True
         login(self.request, user)
         return redirect('candidate_dash')
+
+def CreateJobView(request):
+    # if this is a POST request we need to process the form data
+    if request.method == 'POST':
+        form = CreateJobForm(request.POST)
+        if form.is_valid():
+            # process the data in form.cleaned_data as required
+            job_role = form.cleaned_data['job_role']
+            job_desc = form.cleaned_data['job_desc']
+            location = form.cleaned_data['location']
+            posted_on = datetime.datetime.now()
+            username = request.user.username
+            job = Job.objects.create(job_role=job_role,job_desc=job_desc, posted_on=posted_on, username=username, location=location)
+            # redirect to a new URL:
+            return redirect('jobs')
+    else:
+        form = CreateJobForm()
+    return render(request, 'app/add_job.html', {'form': form})
 
 
 def error_404(request, exception, template_name="404.html"):

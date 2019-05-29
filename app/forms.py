@@ -1,4 +1,3 @@
-
 from django import forms
 from django.contrib.auth.forms import UserCreationForm
 from django.db import transaction
@@ -34,3 +33,8 @@ class CandidateSignUpForm(UserCreationForm):
         user.is_student = True
         user.save()
         return user
+
+class CreateJobForm(forms.Form):
+    job_role = forms.CharField(label='Job Role', max_length=30)
+    job_desc = forms.CharField(widget=forms.Textarea, label='Job Description', max_length=2000)
+    location = forms.CharField(label='Job Location', max_length=100)

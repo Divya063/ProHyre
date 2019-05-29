@@ -7,6 +7,7 @@ urlpatterns = [
     path('dash', views.dash, name='dash'),
     path('candidate_dash', views.candidate_dash, name='candidate_dash'),
     path('jobs', views.jobs, name='jobs'),
+    path('add_job', views.CreateJobView, name='add_job'),
     path('search_jobs', views.search_jobs, name='search_jobs'),
     path('job_desc', views.job_desc, name='job_desc'),
     path('apply_job', views.apply_job, name='apply_job'),
